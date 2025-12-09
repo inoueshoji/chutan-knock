@@ -192,12 +192,77 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* ==============================
-   Responsive – スマホ対応
-============================== */
-@media (max-width: 480px) {
-    h1 { font-size: 28px; }
-    h2 { font-size: 20px; }
-    .word-highlight { font-size: 34px; }
-    .question-title { font-size: 18px; }
+/* --------- レスポンシブ対応 --------- */
+
+/* スマホ（横幅 480px 以下） */
+@media screen and (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 26px;        /* タイトルを小さく */
+        text-align: center;
+    }
+
+    .question-text {
+        font-size: 16px;        /* 「この単語の意味はどれ？」 */
+        margin-bottom: 8px;
+    }
+
+    .question-word {
+        font-size: 32px;        /* 見出し単語（大きめ・ピンク） */
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .option-btn {
+        width: 100%;            /* ボタンを横幅いっぱい */
+        font-size: 18px;
+        text-align: left;       /* 左寄せ */
+        padding: 12px;
+        margin-bottom: 12px;
+        line-height: 1.4;
+        white-space: normal;    /* 長い選択肢は改行して収まる */
+    }
+
+    .speak-btn {
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .next-btn, .result-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
 }
+
+/* --------- タブレット（横幅 768px 以下） --------- */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .question-word {
+        font-size: 40px;
+    }
+
+    .option-btn {
+        font-size: 20px;
+        padding: 14px;
+    }
+}
+
+
