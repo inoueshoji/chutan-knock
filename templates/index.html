@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Chutan Knock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Chutan Knock</h1>
+
+    <h2>{{ username }} さんの成績</h2>
+
+    <div class="score-box">
+        <p>累計出題数： <strong>{{ total }}</strong></p>
+        <p>累計正解数： <strong>{{ correct }}</strong></p>
+
+        {% if total > 0 %}
+        <p>正答率： <strong>{{ (correct / total * 100) | round(1) }} %</strong></p>
+        {% else %}
+        <p>正答率： — </p>
+        {% endif %}
+
+        <p>最終プレイ日： <strong>{{ last_play }}</strong></p>
+    </div>
+
+    <a href="{{ url_for('quiz') }}" class="btn main-btn">クイズを始める</a>
+    <a href="{{ url_for('logout') }}" class="btn sub-btn">ログアウト</a>
+
+</div>
+
+</body>
+</html>

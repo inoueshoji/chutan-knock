@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>結果 - Chutan Knock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>結果</h1>
+
+    <div class="score-box">
+        <p>正解数：<strong>{{ score }} / {{ total }}</strong></p>
+    </div>
+
+    <a href="{{ url_for('quiz') }}" class="btn main-btn">もう一度挑戦する</a>
+    <a href="{{ url_for('index') }}" class="btn sub-btn">トップへ戻る</a>
+</div>
+
+</body>
+</html>

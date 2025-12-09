@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン - Chutan Knock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>ログイン</h1>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form action="" method="POST">
+        <input type="text" name="username" placeholder="ユーザー名" required class="input">
+        <input type="password" name="password" placeholder="パスワード" required class="input">
+
+        <button type="submit" class="btn main-btn">ログイン</button>
+    </form>
+
+    <a href="{{ url_for('register') }}" class="link">新規登録はこちら</a>
+</div>
+
+</body>
+</html>
