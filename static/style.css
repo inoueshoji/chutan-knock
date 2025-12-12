@@ -1,268 +1,96 @@
-/* ==============================
-   Base Layout – 広告バナー風ポップデザイン
-============================== */
-
+/* ===============================
+   Base Layout
+================================= */
 body {
-    background: #00A7A0; /* メインのグリーン */
-    font-family: "Helvetica", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-family: "ヒラギノ角ゴ ProN", "Noto Sans JP", sans-serif;
+    background-color: #00A79D;  /* メインの明るいグリーン */
+    color: white;
     margin: 0;
     padding: 0;
-    color: #fff;
 }
 
 .container {
-    width: 90%;
-    max-width: 450px;
-    margin: 40px auto;
-    text-align: center;
-    background: rgba(255,255,255,0.08);
+    max-width: 600px;
+    margin: 0 auto;
     padding: 30px 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(3px);
+    text-align: center;
 }
 
-/* ==============================
-   Headings（影付き白文字）
-============================== */
-h1 {
-    color: #ffffff;
-    font-size: 32px;
+/* ===============================
+   Titles
+================================= */
+.title {
+    font-size: 48px;
     font-weight: bold;
-    text-shadow: 4px 4px 0px #005B57;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 0px #006b63;
 }
 
-h2 {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-    text-shadow: 4px 4px 0px #005B57;
-    margin-bottom: 15px;
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
 }
 
-/* ==============================
-   問題文「この単語の意味はどれ？」
-============================== */
-.question-title {
-    font-size: 18px;            /* 発音ボタンと同じ */
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 4px 4px 0px #005B57;
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-/* ==============================
-   見出し単語（ピンク大サイズ）
-============================== */
-.word-highlight {
-    font-size: 40px;
-    font-weight: bold;
-    color: #FF80B4;             /* ピンク */
-    text-shadow: 2px 2px 0px #ffffff;
-    margin: 15px 0 10px 0;
-}
-
-/* ==============================
-   Score Box（白透明ボックス）
-============================== */
-.score-box {
-    background: rgba(255,255,255,0.2);
-    padding: 18px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-/* ==============================
-   Buttons – 統一デザイン
-============================== */
-.btn {
+/* ===============================
+   Menu Buttons
+================================= */
+.menu-btn {
     display: block;
-    width: 100%;
-    padding: 14px;
+    background-color: #FFC928; /* 黄色 */
+    color: #333;
+    padding: 15px;
     margin: 12px 0;
-    border-radius: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
+    box-shadow: 4px 4px 0 #006b63;
 }
 
-/* メインボタン（ピンク） */
-.main-btn {
-    background: #FF80B4;
-    color: #ffffff;
-    border: 3px solid #ffffff;
-}
-.main-btn:hover {
-    background: #ff5fa0;
+.menu-btn:hover {
+    background-color: #ffdf6d;
 }
 
-/* サブボタン（黄色） */
-.sub-btn {
-    background: #FFD330;
-    color: #000;
-    border: 3px solid #ffffff;
-}
-.sub-btn:hover {
-    background: #f5c313;
-}
-
-/* ==============================
-   発音ボタン（★ 囲みなし・背景なし）
-============================== */
-.speak-btn {
-    background: none;         /* 囲みなし */
-    border: none;             /* 枠なし */
-    color: #e0f7ff;           /* 淡い水色文字 */
-    font-size: 18px;          /* 問題文と同じサイズ */
-    margin-bottom: 15px;
-    cursor: pointer;
-    text-decoration: none;    /* ★ 下線を消す */
+/* ===============================
+    IKKOSHA Branding
+================================= */
+.footer-brand {
+    margin-top: 55px;
+    text-align: center;
+    opacity: 0.9;
 }
 
-.speak-btn:hover {
-    color: #ffffff;           /* ホバーで白く強調 */
+.ikkosha-logo {
+    width: 130px;
+    margin-bottom: 6px;
 }
 
+.powered {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    color: #004c45;
 }
 
-/* ==============================
-   選択肢ボタン（左揃え・黄色）
-============================== */
-.choice-btn {
-    background: #FFD330;
-    color: #000;
-    border: 3px solid #ffffff;
-    padding: 14px;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 12px 0;
-    cursor: pointer;
-
-    text-align: left;   /* 左揃え */
-    display: block;     /* 必ず1行占有 */
-    width: 100%;
-}
-.choice-btn:hover {
-    background: #f5c313;
-}
-
-/* ==============================
-   Input fields
-============================== */
-.input {
-    width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    background: rgba(255,255,255,0.2);
-    color: #fff;
-    font-size: 16px;
-}
-.input::placeholder {
-    color: #e6e6e6;
-}
-
-/* ==============================
-   Links
-============================== */
-.link {
-    display: block;
-    margin-top: 15px;
-    color: #ffffff;
-    font-weight: bold;
-}
-.link:hover {
-    text-decoration: underline;
-}
-
-/* ==============================
-   Error messages
-============================== */
-.error {
-    background: rgba(255, 0, 0, 0.3);
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ffcccc;
-    margin-bottom: 15px;
-}
-
-/* --------- レスポンシブ対応 --------- */
-
-/* スマホ（横幅 480px 以下） */
+/* ===============================
+   Responsive Design
+================================= */
 @media screen and (max-width: 480px) {
 
-    body {
-        padding: 10px;
+    .title {
+        font-size: 36px;
     }
 
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    h1 {
-        font-size: 26px;        /* タイトルを小さく */
-        text-align: center;
-    }
-
-    .question-text {
-        font-size: 16px;        /* 「この単語の意味はどれ？」 */
-        margin-bottom: 8px;
-    }
-
-    .question-word {
-        font-size: 32px;        /* 見出し単語（大きめ・ピンク） */
-        text-align: center;
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    .option-btn {
-        width: 100%;            /* ボタンを横幅いっぱい */
+    .menu-btn {
         font-size: 18px;
-        text-align: left;       /* 左寄せ */
-        padding: 12px;
-        margin-bottom: 12px;
-        line-height: 1.4;
-        white-space: normal;    /* 長い選択肢は改行して収まる */
-    }
-
-    .speak-btn {
-        font-size: 16px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .next-btn, .result-btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 18px;
-    }
-
-}
-
-/* --------- タブレット（横幅 768px 以下） --------- */
-@media screen and (max-width: 768px) {
-
-    h1 {
-        font-size: 30px;
-    }
-
-    .question-word {
-        font-size: 40px;
-    }
-
-    .option-btn {
-        font-size: 20px;
         padding: 14px;
     }
+
+    .ikkosha-logo {
+        width: 100px;
+    }
+
+    .powered {
+        font-size: 14px;
+    }
 }
-
-
